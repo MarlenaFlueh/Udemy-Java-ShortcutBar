@@ -1,36 +1,50 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-.btnOne {
+.root {
+	-fx-background-color: transparent;
+}
+
+.btn1 {
 	-fx-background-image: url(../images/youtube.png);
 	-fx-background-size: 64 64;
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center;
+	-fx-background-color: transparent;
+	-fx-cursor: hand;
 }
 
-.btnTwo {
-	-fx-background-image: url(../images/bitcoin-logo.png);
+.btn2 {
+	-fx-background-image: url(../images/bitcoin.png);
 	-fx-background-size: 64 64;
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center;
+	-fx-background-color: transparent;
+	-fx-cursor: hand;
 }
 
-.btnThree {
+.btn3 {
 	-fx-background-image: url(../images/gmail.png);
 	-fx-background-size: 64 64;
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center;
+	-fx-background-color: transparent;
+	-fx-cursor: hand;
 }
 
-.btnFour {
+.btn4 {
 	-fx-background-image: url(../images/raspberry.png);
 	-fx-background-size: 64 64;
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center;
+	-fx-background-color: transparent;
+	-fx-cursor: hand;
 }
 
-.btnFive {
-	-fx-background-image: url(../images/delete.png);
-	-fx-background-size: 64 64;
+.btn5 {
+	-fx-background-image: url(../images/cross.png);
+	-fx-background-size: 32 32;
 	-fx-background-repeat: no-repeat;
 	-fx-background-position: center;
+	-fx-background-color: transparent;
+	-fx-cursor: hand;
 }
