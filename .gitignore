@@ -1,6 +1,6 @@
 # Eclipse
 .classpath
 .project
-.settinigs/
+.settings/
 bin/
 build.fxbuild
