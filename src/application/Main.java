@@ -1,5 +1,5 @@
 package application;
-	
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -29,35 +29,17 @@ public class Main extends Application {
 			root.setSpacing(5);
 			root.setAlignment(Pos.CENTER);
 			
-			Button btnZero = new Button();
-			Button btnOne = new Button();
-			Button btnTwo = new Button();
-			Button btnThree = new Button();
-			Button btnFour = new Button();
-			Button btnFive = new Button();
+			Button [] buttons = new Button[6];
 			
-			btnZero.setPrefSize(64, 64);
-			btnOne.setPrefSize(64, 64);
-			btnTwo.setPrefSize(64, 64);
-			btnThree.setPrefSize(64, 64);
-			btnFour.setPrefSize(64, 64);
-			btnFive.setPrefSize(64, 64);
+			for (int i = 0; i < buttons.length; i++) {
+				buttons[i] = new Button();
+				buttons[i].setPrefSize(64, 64);
+				buttons[i].getStyleClass().add("btn" + i);
+				root.getChildren().add(buttons[i]);
+			};
 			
-			btnZero.getStyleClass().add("btn0");
-			btnOne.getStyleClass().add("btn1");
-			btnTwo.getStyleClass().add("btn2");
-			btnThree.getStyleClass().add("btn3");
-			btnFour.getStyleClass().add("btn4");
-			btnFive.getStyleClass().add("btn5");
 			
-			root.getChildren().add(btnZero);
-			root.getChildren().add(btnOne);
-			root.getChildren().add(btnTwo);
-			root.getChildren().add(btnThree);
-			root.getChildren().add(btnFour);
-			root.getChildren().add(btnFive);
-			
-			btnZero.setOnAction(new EventHandler<ActionEvent>() {
+			buttons[0].setOnAction(new EventHandler<ActionEvent>() {
 
 				@Override
 				public void handle(ActionEvent arg0) {
@@ -67,7 +49,7 @@ public class Main extends Application {
 				
 			});
 			
-			btnOne.setOnAction(new EventHandler<ActionEvent>() {
+			buttons[1].setOnAction(new EventHandler<ActionEvent>() {
 
 				@Override
 				public void handle(ActionEvent arg0) {
@@ -77,7 +59,7 @@ public class Main extends Application {
 				
 			});
 			
-			btnTwo.setOnAction(new EventHandler<ActionEvent>() {
+			buttons[2].setOnAction(new EventHandler<ActionEvent>() {
 
 				@Override
 				public void handle(ActionEvent arg0) {
@@ -87,7 +69,7 @@ public class Main extends Application {
 				
 			});
 			
-			btnThree.setOnAction(new EventHandler<ActionEvent>() {
+			buttons[3].setOnAction(new EventHandler<ActionEvent>() {
 
 				@Override
 				public void handle(ActionEvent arg0) {
@@ -97,7 +79,7 @@ public class Main extends Application {
 				
 			});
 			
-			btnFour.setOnAction(new EventHandler<ActionEvent>() {
+			buttons[4].setOnAction(new EventHandler<ActionEvent>() {
 
 				@Override
 				public void handle(ActionEvent arg0) {
@@ -107,7 +89,7 @@ public class Main extends Application {
 				
 			});
 			
-			btnFive.setOnAction(new EventHandler<ActionEvent>() {
+			buttons[5].setOnAction(new EventHandler<ActionEvent>() {
 
 				@Override
 				public void handle(ActionEvent arg0) {
