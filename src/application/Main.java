@@ -103,7 +103,7 @@ public class Main extends Application {
 			scene.setFill(Color.TRANSPARENT);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
-			primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("../images/raspberry.png")));;
+			primaryStage.getIcons().add(new Image(ClassLoader.getSystemResourceAsStream("images/raspberry.png")));;
 			primaryStage.setX((screenSize.getWidth() / 2) - 235);
 			primaryStage.setY(20);
 			primaryStage.initStyle(StageStyle.TRANSPARENT);
