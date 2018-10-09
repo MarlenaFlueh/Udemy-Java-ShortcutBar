@@ -11,9 +11,10 @@ public class ActionLink extends Application {
 	private Button btn;
 	private String url;
 	
-	public ActionLink(Button btn, String url) {
+	public ActionLink(Button btn, String url, Stage stg) throws Exception {
 		this.btn = btn;
 		this.url = url;
+		start(stg);
 	};
 	
 	@Override

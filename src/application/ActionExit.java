@@ -9,15 +9,15 @@ import javafx.stage.Stage;
 public class ActionExit extends Application {
 
 	private Button btn;
-	
-	public ActionExit(Button btn) {
+
+	public ActionExit(Button btn, Stage stg) throws Exception {
 		this.btn = btn;
+		start(stg);
 	};
 
 	@Override
 	public void start(Stage arg0) throws Exception {
 		// TODO Auto-generated method stub
-
 		btn.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override

@@ -1,8 +1,6 @@
 package application;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.stage.Screen;
@@ -30,38 +28,27 @@ public class Main extends Application {
 
 			Button[] buttons = new Button[6];
 
+			String[] urlList = { "https://www.netflix.com/", "https://www.youtube.com/", "https://www.bitcoin.de/",
+					"https://inbox.google.com/", "http://raspberrypros.com" };
+
 			for (int i = 0; i < buttons.length; i++) {
 				buttons[i] = new Button();
 				buttons[i].setPrefSize(64, 64);
 				buttons[i].getStyleClass().add("btn" + i);
 				root.getChildren().add(buttons[i]);
+
+				if (i < (buttons.length - 1)) {
+					new ActionLink(buttons[i], urlList[i], primaryStage);
+				} else {
+					new ActionExit(buttons[5], primaryStage);
+				}
 			}
-			;
-
-			ActionLink btnZero = new ActionLink(buttons[0], "https://www.netflix.com/");
-			btnZero.start(primaryStage);
-
-			ActionLink btnOne = new ActionLink(buttons[1], "https://www.youtube.com/");
-			btnOne.start(primaryStage);
-
-			ActionLink btnTwo = new ActionLink(buttons[2], "https://www.bitcoin.de/");
-			btnTwo.start(primaryStage);
-
-			ActionLink btnThree = new ActionLink(buttons[3], "https://inbox.google.com/");
-			btnThree.start(primaryStage);
-
-			ActionLink btnFour = new ActionLink(buttons[4], "http://raspberrypros.com");
-			btnFour.start(primaryStage);
-
-			ActionExit btnFive = new ActionExit(buttons[5]);
-			btnFive.start(primaryStage);
 
 			Scene scene = new Scene(root, 470, 75);
 			scene.setFill(Color.TRANSPARENT);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.getIcons().add(new Image(ClassLoader.getSystemResourceAsStream("images/raspberry.png")));
-			;
 			primaryStage.setX((screenSize.getWidth() / 2) - 235);
 			primaryStage.setY(20);
 			primaryStage.initStyle(StageStyle.TRANSPARENT);
